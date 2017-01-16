@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <title>购物车</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- cookie库 -->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- form库 -->
+    <script src="js/jquery.form.js"></script>
+    <!-- 消息提示库 -->
+    <link rel="stylesheet" href="css/lobibox.min.css">
+    <script src="js/lobibox.min.js"></script>
+    <!-- 主页逻辑 -->
+    <script type="text/javascript" src="js/utilis.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
+  </head>
+    <body>
+    <header class="navbar navbar-default navbar-static-top" role="navigation">
+      <div id="header" class="container">
+        <a class="navbar-text navbar-link navbar-left glyphicon glyphicon-home" href="./index.html"></a>
+        <h1 id="identity"class="navbar-text label label-defualt">游客</h1>
+        <!-- 动态更改这一部分-->
+        <div id="controller" class="navbar-right btn-group" role="button">
+          <!-- <a id="login_btn" class="btn btn-primary navbar-btn btn-m" href="login.html">注册/登陆</a>
+          <a id="info_btn" class="btn btn-primary navbar-btn btn-m" href="info.html">个人信息</a>
+          <a id="search_btn" class="btn btn-primary navbar-btn btn-m" href="search.html">搜索</a>
+          <a id="cart_btn" class="btn btn-success navbar-btn" href="cart.html">购物车</a>
+          <a id="order_btn" class="btn btn-success navbar-btn" href="order.html">我的订单</a>
+          <a id="deliver_btn" class="btn btn-info navbar-btn" href="deliver.html">我要提货</a>
+          <a id="user_btn" class="btn btn-warning navbar-btn" href="user.html">账户管理</a> -->
+        </div>
+      </div>
+    </header>
+
+    <div class="container page-header">
+      <h2 class="text-center">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        购物车
+      </h2>
+    </div>
+
+    <table id="cart" class="container table-bordered">
+      <thead class="bg-danger">
+        <tr>
+          <th>商品名称</th>
+          <th>提货点名称</th>
+          <th>行政区名</th>
+          <th>价格</th>
+          <th>数量</th>
+          <th>总价</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="cart_display" class="bg-warning">
+      </tbody>
+    </table>
+    <div class="container page-header bg-primary" role="grid">
+      <!-- <h3 class="text-center"></h3> -->
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="btn-group col-sm-offset-5 col-sm-4 col-md-5 col-md-4">
+          <a href="cart_generate_order" class="btn btn-success">生成订单</a>
+          <a href="cart_empty_cart" class="btn btn-danger">清空</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

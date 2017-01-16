@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <title>查询</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- cookie库 -->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- form库 -->
+    <script src="js/jquery.form.js"></script>
+    <!-- 消息提示库 -->
+    <link rel="stylesheet" href="css/lobibox.min.css">
+    <script src="js/lobibox.min.js"></script>
+    <!-- 主页逻辑 -->
+    <script type="text/javascript" src="js/utilis.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+  </head>
+  <body>
+    <header class="navbar navbar-default navbar-static-top" role="navigation">
+      <div id="header" class="container">
+        <a class="navbar-text navbar-link navbar-left glyphicon glyphicon-home" href="./index.html"></a>
+        <h1 id="identity"class="navbar-text label label-defualt">游客</h1>
+        <!-- 动态更改这一部分-->
+        <div id="controller" class="navbar-right btn-group" role="button">
+        </div>
+      </div>
+    </header>
+
+    <div class="container page-header">
+      <h2 class="text-center">
+        <span class='glyphicon glyphicon-search'></span>
+        搜索
+      </h2>
+    </div>
+
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading panel-title">
+          您想查询
+        </div>
+        <div class="panel-body row">
+          <form id='dp_form' class="form-inline" role="form">
+            <div class="form-group col-md-offset-4">
+              <label class="control-label">提货点相关</label>
+              <select class="form-control" name="query_type">
+                <option value="time">营业时长最短的提货点</option>
+                <option value="sale">苹果比橘子销量多的所有提货点</option>
+              </select>
+              <button id="query_dp_btn" type="button" class="btn btn-info form-control">Go</button>
+            </div>
+          </form>
+          <form id='product_form' class="form-inline" role="form">
+            <div class="form-group col-md-offset-2">
+              <label class="control-label">商品相关</label>
+              <select class="form-control" name="query_type">
+                <option value="price">购买过苹果的用户全体购买的所有商品价格汇总情况</option>
+                <option value="product">大于所有商品平均销量的商品</option>
+              </select>
+              <input type="text" name="info" value="" placeholder="苹果/区域">
+              <button id="query_product_btn" type="button" class="btn btn-success form-control">Yes,Sir</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <table id="display" class="container table-bordered">
+
+    </table>
+  </body>
+</html>

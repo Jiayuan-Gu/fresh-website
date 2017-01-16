@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <title>个人信息</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- cookie库 -->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- form库 -->
+    <script src="js/jquery.form.js"></script>
+    <!-- 消息提示库 -->
+    <link rel="stylesheet" href="css/lobibox.min.css">
+    <script src="js/lobibox.min.js"></script>
+    <!-- 主页逻辑 -->
+    <script type="text/javascript" src="js/utilis.js"></script>
+    <script type="text/javascript" src="js/info.js"></script>
+  </head>
+  <body>
+    <header class="navbar navbar-default navbar-static-top" role="navigation">
+      <div id="header" class="container">
+        <a class="navbar-text navbar-link navbar-left glyphicon glyphicon-home" href="./index.html"></a>
+        <h1 id="identity"class="navbar-text label label-defualt">游客</h1>
+        <!-- 动态更改这一部分-->
+        <div id="controller" class="navbar-right btn-group" role="button">
+        </div>
+      </div>
+    </header>
+
+    <div class="container page-header">
+      <h2 class="text-center">
+        <span class="glyphicon glyphicon-user"></span>
+        个人信息
+      </h2>
+    </div>
+
+    <div class="container well table-responsive">
+      <table class="table table-bordered ">
+        <tr>
+          <td>用户名</td><td id="username"></td><td>昵称</td><td id="nickname"></td>
+        </tr>
+        <tr>
+          <td>性别</td><td id="sex"></td><td>联系方式</td><td id="contact"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="container page-header">
+      <h2 class="text-center">
+        <span class="glyphicon glyphicon-list"></span>
+        我的订单
+      </h2>
+    </div>
+
+    <div id="order_display" class="container panel panel-info">
+      <!-- <div class="panel-heading row">
+        <span class="col-xs-6 col-md-6">提货码：</span><span class="col-xs-6 col-md-6">下单时间：</span>
+      </div>
+      <table class="panel-body table table-bordered">
+        <thead>
+          <tr>
+            <th>商品名称</th><th>数量</th><th>价格</th><th>单位</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>苹果</td><td>1</td><td>1</td><td>公斤</td>
+          </tr>
+        </tbody>
+      </table> -->
+      <!-- <div class="panel-heading row">
+        <span class="col-xs-6 col-md-6">提货码：</span><span class="col-xs-6 col-md-6">下单时间：</span>
+      </div>
+      <table class="panel-body table table-bordered">
+        <thead>
+          <tr>
+            <th>商品名称</th><th>数量</th><th>价格</th><th>单位</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>苹果</td><td>1</td><td>1</td><td>公斤</td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+  </body>
+</html>

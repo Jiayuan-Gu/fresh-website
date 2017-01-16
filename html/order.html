@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <title>提货</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- cookie库 -->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- form库 -->
+    <script src="js/jquery.form.js"></script>
+    <!-- 消息提示库 -->
+    <link rel="stylesheet" href="css/lobibox.min.css">
+    <script src="js/lobibox.min.js"></script>
+    <!-- 主页逻辑 -->
+    <script type="text/javascript" src="js/utilis.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+  </head>
+    <body>
+      <header class="navbar navbar-default navbar-static-top" role="navigation">
+        <div id="header" class="container">
+          <a class="navbar-text navbar-link navbar-left glyphicon glyphicon-home" href="./index.html"></a>
+          <h1 id="identity"class="navbar-text label label-defualt">游客</h1>
+          <!-- 动态更改这一部分-->
+          <div id="controller" class="navbar-right btn-group" role="button">
+          </div>
+        </div>
+      </header>
+
+      <div class="container page-header">
+        <h2 class="text-center">提货单管理</h2>
+      </div>
+
+      <div class="container">
+        <div class="panel panel-primary">
+          <div class="panel-heading panel-title">
+            提货单查询
+          </div>
+          <div class="panel-body row">
+            <form id="download_form" action="order_download" method="get" class="form-inline" role="form">
+              <div class="form-group col-md-offset-1 col-md-5">
+                <label for="start_date" class="control-label">起始日期</label>
+                <input type="date" class="form-control" id="start_date" name="start_datetime" required="required">
+              </div>
+              <div class="form-group col-md-offset-1 col-md-5">
+                <label for="end_date" class="control-label">截止日期</label>
+                <input type="date" class="form-control" id="end_date" name="end_datetime" required="required">
+              </div>
+            </form>
+            <form id="query_form" class="form-inline" role="form">
+              <div class="form-group col-md-offset-1 col-md-5">
+                <label for="code_input" class="control-label">提货码</label>
+                <input type="text" class="form-control" id="code_input" name="code" required="required">
+              </div>
+            </form>
+            <div class="btn-group col-md-offset-5">
+              <button id="query_btn" type="button" class="btn btn-info">查询提货码</button>
+              <button id="download_btn" type="button" class="btn btn-info">提货单下载</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container page-header bg-primary" role="grid"></div> -->
+      <div id="order_display" class="container panel panel-info">
+      </div>
+  </body>
+</html>
